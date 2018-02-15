@@ -1,0 +1,217 @@
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Runner: processes
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Chooser: simple
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration suite_name = "public"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration cache_filename = "/home/maxl/330/ocaml/public/p2a/_build/oUnit-$(suite_name).cache"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration display = "true"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration results_style_1_X = "false"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration verbose = "false"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration health_check_interval = "1."
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration testdata_dir = "none"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration chooser = "simple"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration output_html_dir = "none"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration processes_kill_period = "5."
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration runner = "processes"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration shards = "4"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration processes_grace_period = "5."
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration log_encoding = "utf-8"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration output_junit_file = "none"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Configuration output_file = "/home/maxl/330/ocaml/public/p2a/_build/oUnit-$(suite_name)-$(shard_id).log"
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Using 4 workers maximum.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Starting worker number maxl-Gazelle#01.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#01 started.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Starting worker number maxl-Gazelle#02.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#02 started.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Starting worker number maxl-Gazelle#03.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#03 started.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Starting worker number maxl-Gazelle#04.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#04 started.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:3:second_element, public:2:ack, public:1:gcd, public:0:divides.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 I: Start test public:0:divides.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: Start test public:1:gcd.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:3:second_element, public:2:ack, public:1:gcd, public:0:divides.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 I: Test public:0:divides is successful.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:3:second_element, public:2:ack, public:1:gcd, public:0:divides.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 I: End test public:0:divides.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: Test public:1:gcd is successful.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:3:second_element, public:2:ack, public:1:gcd, public:0:divides.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: End test public:1:gcd.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:4:max_first_three, public:3:second_element, public:2:ack, public:1:gcd.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:5:partial_sum, public:4:max_first_three, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 I: Start test public:4:max_first_three.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:5:partial_sum, public:4:max_first_three, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: Start test public:5:partial_sum.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:5:partial_sum, public:4:max_first_three, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 I: Start test public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Test public:5:partial_sum exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Failure("partial_sum unimplemented") in test public:5:partial_sum.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:5:partial_sum, public:4:max_first_three, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: End test public:5:partial_sum.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:5:partial_sum, public:4:max_first_three, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#04 I: Start test public:3:second_element.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:6:partial_sums, public:4:max_first_three, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 I: Test public:4:max_first_three is successful.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: Start test public:6:partial_sums.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:6:partial_sums, public:4:max_first_three, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 I: End test public:4:max_first_three.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Test public:6:partial_sums exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Failure("partial_sums unimplemented") in test public:6:partial_sums.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:6:partial_sums, public:4:max_first_three, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: End test public:6:partial_sums.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:7:zip, public:6:partial_sums, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 I: Test public:2:ack is successful.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:8:index, public:7:zip, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 I: End test public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 I: Start test public:7:zip.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: Start test public:8:index.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:8:index, public:7:zip, public:3:second_element, public:2:ack.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#04 I: Test public:3:second_element is successful.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 E: Test public:7:zip exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 E: Failure("zip unimplemented") in test public:7:zip.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Test public:8:index exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Failure("index_x unimplemented") in test public:8:index.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:9:elem, public:8:index, public:7:zip, public:3:second_element.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#04 I: End test public:3:second_element.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 I: End test public:7:zip.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: End test public:8:index.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:9:elem, public:8:index, public:7:zip, public:3:second_element.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 I: Start test public:9:elem.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:12:union, public:11:remove, public:10:subset, public:9:elem.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 E: Test public:9:elem exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 E: Failure("elem unimplemented") in test public:9:elem.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: Start test public:10:subset.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:12:union, public:11:remove, public:10:subset, public:9:elem.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 I: End test public:9:elem.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Test public:10:subset exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Failure("insert unimplemented") in test public:10:subset.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 I: Start test public:11:remove.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#04 I: Start test public:12:union.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:12:union, public:11:remove, public:10:subset, public:9:elem.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: End test public:10:subset.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 E: Test public:11:remove exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 E: Failure("remove unimplemented") in test public:11:remove.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#04 E: Test public:12:union exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#04 E: Failure("insert unimplemented") in test public:12:union.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#04 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#04 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#04 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:13:intersection, public:12:union, public:11:remove, public:10:subset.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#01 I: End test public:11:remove.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#04 I: End test public:12:union.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Still 4 tests running : public:14:product, public:13:intersection, public:12:union, public:11:remove.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 4 tests running: public:14:product, public:13:intersection, public:12:union, public:11:remove.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 I: Start test public:13:intersection.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: Start test public:14:product.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Still 2 tests running : public:14:product, public:13:intersection.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 2 tests running: public:14:product, public:13:intersection.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 E: Test public:13:intersection exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 E: Failure("insert unimplemented") in test public:13:intersection.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Test public:14:product exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Failure("insert unimplemented") in test public:14:product.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Still 2 tests running : public:14:product, public:13:intersection.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 2 tests running: public:14:product, public:13:intersection.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#03 I: End test public:13:intersection.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#02 I: End test public:14:product.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Still 2 tests running : public:14:product, public:13:intersection.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 2 tests running: public:14:product, public:13:intersection.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: 0 tests running: .
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#01 has ended.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#04 has ended.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#03 has ended.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#02 has ended.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Used 4 worker during test execution.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Run 2 tests with shard maxl-Gazelle#04.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Run 4 tests with shard maxl-Gazelle#01.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Run 3 tests with shard maxl-Gazelle#03.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Run 6 tests with shard maxl-Gazelle#02.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: ==============
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Summary:
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Test public:14:product exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Failure("insert unimplemented") in test public:14:product.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Test public:13:intersection exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Failure("insert unimplemented") in test public:13:intersection.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Test public:12:union exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Failure("insert unimplemented") in test public:12:union.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Test public:11:remove exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Failure("remove unimplemented") in test public:11:remove.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Test public:10:subset exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Failure("insert unimplemented") in test public:10:subset.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Test public:9:elem exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Failure("elem unimplemented") in test public:9:elem.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Test public:8:index exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Failure("index_x unimplemented") in test public:8:index.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Test public:7:zip exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Failure("zip unimplemented") in test public:7:zip.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Test public:3:second_element is successful.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Test public:2:ack is successful.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Test public:6:partial_sums exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Failure("partial_sums unimplemented") in test public:6:partial_sums.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Test public:4:max_first_three is successful.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Test public:5:partial_sum exited with an error.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Failure("partial_sum unimplemented") in test public:5:partial_sum.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 E: 
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Test public:1:gcd is successful.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Test public:0:divides is successful.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Ran: 15 tests in: 0.10 seconds.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Cases: 15.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Tried: 15.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Errors: 10.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Failures: 0.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Skip: 0.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Todo: 0.
+2018-02-15T22:03:58+00:00 maxl-Gazelle#00 I: Timeout: 0.
