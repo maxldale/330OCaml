@@ -1,0 +1,17 @@
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 I: Start test public:0:high_order_1.
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 I: Test public:0:high_order_1 is successful.
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 I: End test public:0:high_order_1.
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 I: Start test public:4:common_2.
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 E: Test public:4:common_2 exited with an error.
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 E: Failure("unimplemented") in test public:4:common_2.
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 E: 
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 I: End test public:4:common_2.
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 I: Start test public:6:graph_1.
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 E: Test public:6:graph_1 exited with an error.
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 E: Failure("unimplemented") in test public:6:graph_1.
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 E: Raised at file "pervasives.ml", line 30, characters 22-33
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 E: 
+2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#01 I: End test public:6:graph_1.
