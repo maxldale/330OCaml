@@ -1,0 +1,16 @@
+### Starting build.
+# Target: public.ml.depends, tags: { extension:ml, file:public.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep -modules public.ml > public.ml.depends # cached
+# Target: disc.ml.depends, tags: { extension:ml, file:disc.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep -modules disc.ml > disc.ml.depends
+# Target: disc.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:disc.cmo, file:disc.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc -c -I /home/maxl/.opam/system/lib/bytes -I /home/maxl/.opam/system/lib/oUnit -I /usr/lib/ocaml -o disc.cmo disc.ml
+# Target: public.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:public.cmo, file:public.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc -c -I /home/maxl/.opam/system/lib/bytes -I /home/maxl/.opam/system/lib/oUnit -I /usr/lib/ocaml -o public.cmo public.ml
+# Target: disc.cmx, tags: { compile, extension:cmx, extension:ml, file:disc.cmx, file:disc.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt -c -I /home/maxl/.opam/system/lib/bytes -I /home/maxl/.opam/system/lib/oUnit -I /usr/lib/ocaml -o disc.cmx disc.ml
+# Target: public.cmx, tags: { compile, extension:cmx, extension:ml, file:public.cmx, file:public.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt -c -I /home/maxl/.opam/system/lib/bytes -I /home/maxl/.opam/system/lib/oUnit -I /usr/lib/ocaml -o public.cmx public.ml
+# Target: public.native, tags: { dont_link_with, extension:native, file:public.native, link, native, ocaml, program, quiet }
+/usr/bin/ocamlopt -I /home/maxl/.opam/system/lib/bytes -I /home/maxl/.opam/system/lib/oUnit -I /usr/lib/ocaml /usr/lib/ocaml/unix.cmxa /home/maxl/.opam/system/lib/oUnit/oUnitAdvanced.cmxa /home/maxl/.opam/system/lib/oUnit/oUnit.cmxa disc.cmx public.cmx -o public.native
+# Compilation successful.
