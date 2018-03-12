@@ -1,0 +1,21 @@
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Start test public:2:expr_fail.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Test public:2:expr_fail is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: End test public:2:expr_fail.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Start test public:6:define_2.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Test public:6:define_2 is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: End test public:6:define_2.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Start test public:10:notequal.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Test public:10:notequal is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: End test public:10:notequal.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Start test public:14:exp_2.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Test public:14:exp_2 is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: End test public:14:exp_2.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Start test public:18:while.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Test public:18:while is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: End test public:18:while.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Start test public:24:test_3.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Test public:24:test_3 is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: End test public:24:test_3.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Start test public:26:stmt_fail_control.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: Test public:26:stmt_fail_control is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#03 I: End test public:26:stmt_fail_control.
