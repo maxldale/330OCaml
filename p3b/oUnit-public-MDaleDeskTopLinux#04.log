@@ -1,0 +1,18 @@
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Start test public:3:stmt_basic.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Test public:3:stmt_basic is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: End test public:3:stmt_basic.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Start test public:7:assign_1.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Test public:7:assign_1 is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: End test public:7:assign_1.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Start test public:12:less.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Test public:12:less is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: End test public:12:less.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Start test public:17:if_else_while.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Test public:17:if_else_while is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: End test public:17:if_else_while.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Start test public:21:main.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Test public:21:main is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: End test public:21:main.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Start test public:25:stmt_fail_basic.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: Test public:25:stmt_fail_basic is successful.
+2018-03-12T04:20:20+00:00 MDaleDeskTopLinux#04 I: End test public:25:stmt_fail_basic.

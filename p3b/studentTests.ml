@@ -16,6 +16,9 @@ open TestUtils
 let test_no_output =
   create_system_test [] [("n", Int_Val(0)); ("b", Bool_Val(false))] "student_inputs/no_output.c"
 
+let test_test_1 = create_system_test [] [("a", Int_Val 10);("sum", Int_Val 45); ("b", Int_Val 10)] "public_inputs/test1.c"
+    ~output:"1\n10\n1\n3\n10\n3\n6\n10\n6\n10\n10\n10\n15\n10\n15\n21\n10\n21\n28\n10\n28\n36\n10\n36\n45\n20\n45\n"
+
 let test_with_output =
   let e = [("prebound", Int_Val(123))] in
   (* The optional argument `output` is used to specify expected output.
@@ -32,6 +35,7 @@ let suite =
 
     "no_output" >:: test_no_output;
     "with_output" >:: test_with_output;
+    "test_1" >:: test_test_1;
   ]
 
 (* Leave this alone - this kicks off the tests when the executable is run *)
