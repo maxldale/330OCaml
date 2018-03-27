@@ -6,11 +6,11 @@ open Sets
 
 type ('q, 's) transition = 'q * 's option * 'q
 type ('q, 's) nfa_t = {
-  qs : 'q list;
-  sigma : 's list;
-  delta : ('q, 's) transition list;
-  q0 : 'q;
-  fs : 'q list;
+  qs : 'q list; (* Finite set of states *)
+  sigma : 's list; (* Finite alphabet *)
+  delta : ('q, 's) transition list; (* Transitions *)
+  q0 : 'q; (* Start state *)
+  fs : 'q list; (* Set of accept states *)
 }
 
 (*********************)
@@ -29,8 +29,43 @@ let rec fix comp f x0 =
 (****************)
 (* Part 1: NFAs *)
 (****************)
+let rec filterTransitionsManyStates states transitions symbol = 
+	match states with
+	  [] -> []
+	| h_state :: t_states -> begin
+			let h_res = (filterTransitions h_state transitions symbol) in
+			let t_res = (filterTransitionsManyStates t_states transitions symbol) in
+			List.append h_res t_res
+		end
+;;
 
-let move m qs s = failwith "unimplemented"
+let rec filterTransitions state transitions symbol =
+	match transitions with
+	  [] -> []
+	| h_transition :: t_transitions -> 
+		begin
+			let (start_state, transition_symbol, end_state) = h_transition in
+			if state = start_state then
+				begin
+					let res = begin
+						match (symbol, transition_symbol) with
+						  (same_opt, same_opt) -> end_state
+						| _ -> []
+					end
+					res :: (filterTransitions states tail_transitions symbol)
+				end
+			else
+				begin
+					filterTransitions states tail_transitions symbol
+				end
+		end
+;;
+
+let move m qs s = 
+	match s with
+	  Some a ->
+	| None -> 
+;;
 
 let e_closure m qs = failwith "unimplemented"
 
