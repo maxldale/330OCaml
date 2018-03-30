@@ -1,0 +1,83 @@
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Runner: processes
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Chooser: simple
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration suite_name = "public"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration cache_filename = "/home/maxl/330/ocaml/public/discussions/disc8/_build/oUnit-$(suite_name).cache"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration display = "true"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration results_style_1_X = "false"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration verbose = "false"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration health_check_interval = "1."
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration testdata_dir = "none"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration chooser = "simple"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration output_html_dir = "none"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration processes_kill_period = "5."
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration runner = "processes"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration shards = "4"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration processes_grace_period = "5."
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration log_encoding = "utf-8"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration output_junit_file = "none"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Configuration output_file = "/home/maxl/330/ocaml/public/discussions/disc8/_build/oUnit-$(suite_name)-$(shard_id).log"
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Using 4 workers maximum.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Starting worker number maxl-Gazelle#01.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#01 started.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Starting worker number maxl-Gazelle#02.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#02 started.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Starting worker number maxl-Gazelle#03.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#03 started.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Starting worker number maxl-Gazelle#04.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#04 started.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Still 4 tests running : public:3:parentheses, public:2:right_associative, public:1:one_plus_two, public:0:one.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 4 tests running: public:3:parentheses, public:2:right_associative, public:1:one_plus_two, public:0:one.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#01 I: Start test public:0:one.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#02 I: Start test public:1:one_plus_two.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Still 4 tests running : public:3:parentheses, public:2:right_associative, public:1:one_plus_two, public:0:one.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 4 tests running: public:3:parentheses, public:2:right_associative, public:1:one_plus_two, public:0:one.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#01 I: Test public:0:one is successful.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#03 I: Start test public:2:right_associative.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Still 4 tests running : public:3:parentheses, public:2:right_associative, public:1:one_plus_two, public:0:one.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 4 tests running: public:3:parentheses, public:2:right_associative, public:1:one_plus_two, public:0:one.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#01 I: End test public:0:one.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#02 I: Test public:1:one_plus_two is successful.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#04 I: Start test public:3:parentheses.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Still 4 tests running : public:3:parentheses, public:2:right_associative, public:1:one_plus_two, public:0:one.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 4 tests running: public:3:parentheses, public:2:right_associative, public:1:one_plus_two, public:0:one.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#02 I: End test public:1:one_plus_two.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Still 3 tests running : public:3:parentheses, public:2:right_associative, public:1:one_plus_two.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 3 tests running: public:3:parentheses, public:2:right_associative, public:1:one_plus_two.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Still 2 tests running : public:3:parentheses, public:2:right_associative.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 2 tests running: public:3:parentheses, public:2:right_associative.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#03 I: Test public:2:right_associative is successful.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Still 2 tests running : public:3:parentheses, public:2:right_associative.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 2 tests running: public:3:parentheses, public:2:right_associative.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#03 I: End test public:2:right_associative.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Still 2 tests running : public:3:parentheses, public:2:right_associative.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 2 tests running: public:3:parentheses, public:2:right_associative.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#04 I: Test public:3:parentheses is successful.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Still 1 tests running : public:3:parentheses.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 1 tests running: public:3:parentheses.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#04 I: End test public:3:parentheses.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Still 1 tests running : public:3:parentheses.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 1 tests running: public:3:parentheses.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: 0 tests running: .
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#01 has ended.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#02 has ended.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#03 has ended.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Worker maxl-Gazelle#04 has ended.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Used 4 worker during test execution.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Run 1 tests with shard maxl-Gazelle#04.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Run 1 tests with shard maxl-Gazelle#01.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Run 1 tests with shard maxl-Gazelle#03.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Run 1 tests with shard maxl-Gazelle#02.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: ==============
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Summary:
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Test public:3:parentheses is successful.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Test public:2:right_associative is successful.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Test public:1:one_plus_two is successful.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Test public:0:one is successful.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Ran: 4 tests in: 0.10 seconds.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Cases: 4.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Tried: 4.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Errors: 0.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Failures: 0.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Skip: 0.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Todo: 0.
+2018-03-30T16:51:24+00:00 maxl-Gazelle#00 I: Timeout: 0.

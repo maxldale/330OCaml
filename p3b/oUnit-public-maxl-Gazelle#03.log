@@ -1,0 +1,21 @@
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Start test public:2:expr_fail.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Test public:2:expr_fail is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: End test public:2:expr_fail.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Start test public:5:define_1.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Test public:5:define_1 is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: End test public:5:define_1.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Start test public:9:assign_exp.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Test public:9:assign_exp is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: End test public:9:assign_exp.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Start test public:13:exp_1.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Test public:13:exp_1 is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: End test public:13:exp_1.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Start test public:17:if_else_while.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Test public:17:if_else_while is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: End test public:17:if_else_while.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Start test public:22:test_1.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Test public:22:test_1 is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: End test public:22:test_1.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Start test public:25:stmt_fail_basic.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: Test public:25:stmt_fail_basic is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#03 I: End test public:25:stmt_fail_basic.

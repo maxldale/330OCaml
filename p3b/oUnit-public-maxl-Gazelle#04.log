@@ -1,0 +1,18 @@
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Start test public:3:stmt_basic.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Test public:3:stmt_basic is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: End test public:3:stmt_basic.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Start test public:8:assign_2.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Test public:8:assign_2 is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: End test public:8:assign_2.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Start test public:12:less.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Test public:12:less is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: End test public:12:less.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Start test public:16:ifelse.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Test public:16:ifelse is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: End test public:16:ifelse.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Start test public:20:nested_while.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Test public:20:nested_while is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: End test public:20:nested_while.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Start test public:26:stmt_fail_control.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: Test public:26:stmt_fail_control is successful.
+2018-03-15T19:31:00+00:00 maxl-Gazelle#04 I: End test public:26:stmt_fail_control.
