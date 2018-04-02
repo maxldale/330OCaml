@@ -1,8 +1,0 @@
-2018-03-29T20:21:35+00:00 maxl-Gazelle#04 I: Start test public:3:nfa_to_dfa.
-2018-03-29T20:21:35+00:00 maxl-Gazelle#04 E: Test public:3:nfa_to_dfa exited with an error.
-2018-03-29T20:21:35+00:00 maxl-Gazelle#04 E: Failure("unimplemented") in test public:3:nfa_to_dfa.
-2018-03-29T20:21:35+00:00 maxl-Gazelle#04 E: Raised at file "pervasives.ml", line 32, characters 22-33
-2018-03-29T20:21:35+00:00 maxl-Gazelle#04 E: Called from file "public.ml", line 21, characters 12-25
-2018-03-29T20:21:35+00:00 maxl-Gazelle#04 E: Called from file "src/oUnitRunner.ml", line 46, characters 13-26
-2018-03-29T20:21:35+00:00 maxl-Gazelle#04 E: 
-2018-03-29T20:21:35+00:00 maxl-Gazelle#04 I: End test public:3:nfa_to_dfa.

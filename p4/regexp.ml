@@ -16,9 +16,185 @@ type regexp_t =
 (* Part 2: Regular Expressions *)
 (*******************************)
 
-let regexp_to_nfa re = failwith "unimplemented"
+let rec shift_qs l n =
+	match l with
+	  [] -> []
+	| h :: t -> ((h + n) :: (shift_qs t n))
+;;
 
-let regexp_to_string r = failwith "unimplemented"
+let rec shift_deltas l n =
+	match l with
+	  [] -> []
+	| (s, sym, e) :: t -> (((s + n), sym, (e + n)) :: (shift_deltas t n))
+;;
+
+let rec remove (l : 'a list) (v : 'a) : 'a list =
+	match l with
+	  [] -> []
+	| h :: t -> 
+		begin
+			if (v = h) then (remove t v)
+			else (h :: (remove t v))
+		end
+;;
+
+let rec remove_dups (l1 : 'a list) (l2 : 'a list) : 'a list =
+	match l1 with
+	  [] -> l2
+	| h :: t ->
+		begin
+			let new_l2 = (remove l2 h) in
+			remove_dups t new_l2
+		end
+;;
+
+let rec generate_nfa re =
+	match re with
+	  Empty_String ->
+		begin
+			{
+				qs = [0];
+				sigma = [];
+				delta = [];
+				q0 = 0;
+				fs = [0];
+			}
+		end
+	| Char c ->
+		begin
+			let new_qs = [0; 1] in
+			let new_sigma = [c] in
+			let new_delta = [(0, (Some c), 1)] in
+			let new_q0 = 0 in
+			let new_end_s = [1] in
+			{
+				qs = new_qs;
+				sigma = new_sigma;
+				delta = new_delta;
+				q0 = new_q0;
+				fs = new_end_s;
+			}
+		end
+	| Union (exp1, exp2) ->
+		begin
+			let nfa1 = generate_nfa exp1 in
+			let nfa2 = generate_nfa exp2 in
+			
+			let i_1_2 = (1 + (List.length nfa1.qs)) in
+			let i_2_1 = (1 + i_1_2) in
+			let i_2_2 = (i_2_1 + (List.length nfa2.qs) - 1) in
+			
+			let nfa1_qs = (shift_qs nfa1.qs 2) in
+			let nfa2_qs = (shift_qs nfa2.qs i_2_1) in
+			let new_qs = (0 :: 1 :: (List.append nfa1_qs nfa2_qs)) in
+			
+			let new_sigma = (List.append nfa1.sigma (remove_dups nfa1.sigma nfa2.sigma)) in
+			
+			let nfa1_deltas = (shift_deltas nfa1.delta 2) in
+			let nfa2_deltas = (shift_deltas nfa2.delta i_2_1) in
+			let new_delta = (
+				(0, None, 2) ::
+				(0, None, i_2_1) ::
+				(i_1_2, None, 1) ::
+				(i_2_2, None, 1) ::
+				(List.append nfa1_deltas nfa2_deltas)) in
+			
+			let new_q0 = 0 in
+			
+			let new_end_s = [1] in
+			
+			{
+				qs = new_qs;
+				sigma = new_sigma;
+				delta = new_delta;
+				q0 = new_q0;
+				fs = new_end_s;
+			}
+		end
+	| Concat (exp1, exp2) ->
+		begin
+			let nfa1 = generate_nfa exp1 in
+			let nfa2 = generate_nfa exp2 in
+			
+			let i_1 = (1 + (List.length nfa1.qs)) in
+			let i_2 = (1 + i_1) in
+			let i_3 = (i_2 + (List.length nfa2.qs) - 1) in
+			
+			let nfa1_qs = (shift_qs nfa1.qs 2) in
+			let nfa2_qs = (shift_qs nfa2.qs i_2) in
+			let new_qs = (0 :: 1 :: (List.append nfa1_qs nfa2_qs)) in
+			
+			let new_sigma = (List.append nfa1.sigma (remove_dups nfa1.sigma nfa2.sigma)) in
+			
+			let nfa1_deltas = (shift_deltas nfa1.delta 2) in
+			let nfa2_deltas = (shift_deltas nfa2.delta i_2) in
+			let new_delta = (
+				(0, None, 2) ::
+				(i_1, None, i_2) ::
+				(i_3, None, 1) ::
+				(List.append nfa1_deltas nfa2_deltas)) in
+			
+			let new_q0 = 0 in
+			
+			let new_end_s = [1] in
+			
+			{
+				qs = new_qs;
+				sigma = new_sigma;
+				delta = new_delta;
+				q0 = new_q0;
+				fs = new_end_s;
+			}
+		end
+	|Star exp ->
+		begin
+			let nfa = generate_nfa exp in
+			
+			let i_1 = (1 + (List.length nfa.qs)) in
+			
+			let nfa_qs = (shift_qs nfa.qs 2) in
+			let new_qs = (0 :: 1 :: nfa_qs) in
+			
+			let new_sigma = (nfa.sigma) in
+			
+			let nfa_deltas = (shift_deltas nfa.delta 2) in
+			let new_delta = (
+				(0, None, 1) ::
+				(0, None, 2) ::
+				(1, None, 0) ::
+				(i_1, None, 1) ::
+				nfa_deltas) in
+			
+			let new_q0 = 0 in
+			
+			let new_end_s = [1] in
+			
+			{
+				qs = new_qs;
+				sigma = new_sigma;
+				delta = new_delta;
+				q0 = new_q0;
+				fs = new_end_s;
+			}
+		end
+;;
+
+let regexp_to_nfa re =
+	generate_nfa re
+;;
+
+let rec form_regex r =
+	match r with
+	  Empty_String -> "E"
+	| Char c -> (String.make 1 c)
+	| Union (exp1, exp2) -> "(" ^ (form_regex exp1) ^ "|" ^ (form_regex exp2) ^ ")"
+	| Concat (exp1, exp2) -> "(" ^ (form_regex exp1) ^ (form_regex exp2) ^ ")"
+	| Star exp -> (form_regex exp) ^ "*"
+;;
+
+let regexp_to_string r =
+	form_regex r
+;;
 
 (*****************************************************************)
 (* Below this point is parser code that YOU DO NOT NEED TO TOUCH *)

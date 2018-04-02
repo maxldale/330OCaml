@@ -91,12 +91,130 @@ let e_closure m qs =
 	e_closureManyStates qs m.delta
 ;;
 
-let rec acceptManyChars chars transitions =
-	(* TODO finish this function *)
+let rec checkIfEndState end_states state =
+	match end_states with
+	  [] -> false
+	| h_state :: t_states ->
+		begin
+			if state = h_state then
+				true
+			else
+				checkIfEndState t_states state
+		end
+;;
+
+let rec checkIfEndStateMany m states =
+	match states with
+	  [] -> false
+	| h_state :: t_states ->
+		begin
+			if checkIfEndState m.fs h_state then
+				true
+			else
+				checkIfEndStateMany m t_states
+		end
+;;
+
+let rec acceptManyChars chars m states =
+	let possible_states = (e_closure m states) in
+	match chars with
+	  [] -> (checkIfEndStateMany m possible_states)
+	| h_char :: t_chars ->
+		begin
+			let new_states = (move m possible_states (Some(h_char))) in
+			acceptManyChars t_chars m new_states
+		end
 ;;
 	
 let accept m str =
-	acceptManyChars (explode str) m.delta
+	acceptManyChars (explode str) m [m.q0]
 ;;
 
-let nfa_to_dfa m = failwith "unimplemented"
+let rec lookup_state state_map state =
+	match state_map with
+	  [] -> None
+	| h_state :: t_map ->
+		begin
+			if h_state = state then
+				Some(state)
+			else
+				lookup_state t_map state
+		end
+;;
+
+let rec contains_same_ele arr1 arr2 =
+	match arr1 with
+	  [] -> false
+	| h1 :: t1 ->
+		begin
+			match arr2 with
+			  [] -> false
+			| h2 :: t2 ->
+				begin
+					if h1 = h2 then
+						true
+					else
+						let res1 = contains_same_ele arr1 t2 in
+						let res2 = contains_same_ele t1 arr2 in
+						(res1 || res2)
+				end
+		end
+
+let rec get_end_states final_states state_map =
+	match state_map with
+	  [] -> []
+	| state :: t_s_m ->
+		begin
+			if (contains_same_ele state final_states) then
+				state :: (get_end_states final_states t_s_m)
+			else
+				(get_end_states final_states t_s_m)
+		end
+;;
+
+let rec convert_nfa m sigma curr_state state_map transitions =
+	let orig_sigma = m.sigma in
+	match sigma with
+	  [] -> (transitions, state_map)
+	| symbol :: symbols ->
+		begin
+			let moves = (move m curr_state (Some symbol)) in
+			let new_state = e_closure m moves in
+			match (lookup_state state_map new_state) with
+			  None ->
+				begin
+					let new_s_m = new_state :: state_map in
+					let new_t = (curr_state, (Some symbol), new_state) in
+					let new_ts = new_t :: transitions in
+					let curr_index_res = convert_nfa m symbols curr_state new_s_m new_ts in
+					let (curr_t, curr_s_m) = curr_index_res in
+					convert_nfa m orig_sigma new_state curr_s_m curr_t
+				end
+			| Some(existing_s) ->
+				begin
+					let new_t = (curr_state, (Some symbol), existing_s) in
+					let new_ts = new_t :: transitions in
+					convert_nfa m symbols curr_state state_map new_ts
+				end
+		end
+;;
+
+let nfa_to_dfa m =
+	let start_s = (e_closure m [m.q0]) in
+	let init_s_m = [start_s] in
+	let init_ts = [] in
+	let (dfa_ts, dfa_s_m) = (convert_nfa m
+		m.sigma
+		start_s
+		init_s_m
+		init_ts
+		) in
+	let end_states = (get_end_states m.fs dfa_s_m) in
+	{
+		qs = dfa_s_m;
+		sigma = m.sigma;
+		delta = dfa_ts;
+		q0 = start_s;
+		fs = end_states
+	}
+;;
