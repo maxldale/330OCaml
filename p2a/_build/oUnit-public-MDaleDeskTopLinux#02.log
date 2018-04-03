@@ -1,0 +1,12 @@
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: Start test public:1:gcd.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: Test public:1:gcd is successful.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: End test public:1:gcd.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: Start test public:6:partial_sums.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: Test public:6:partial_sums is successful.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: End test public:6:partial_sums.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: Start test public:11:remove.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: Test public:11:remove is successful.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: End test public:11:remove.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: Start test public:14:product.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: Test public:14:product is successful.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#02 I: End test public:14:product.

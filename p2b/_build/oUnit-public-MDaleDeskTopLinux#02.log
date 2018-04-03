@@ -1,3 +1,9 @@
-2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#02 I: Start test public:1:high_order_2.
-2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#02 I: Test public:1:high_order_2 is successful.
-2018-02-23T00:30:18+00:00 MDaleDeskTopLinux#02 I: End test public:1:high_order_2.
+2018-02-23T22:54:41+00:00 MDaleDeskTopLinux#02 I: Start test public:1:high_order_2.
+2018-02-23T22:54:41+00:00 MDaleDeskTopLinux#02 I: Test public:1:high_order_2 is successful.
+2018-02-23T22:54:41+00:00 MDaleDeskTopLinux#02 I: End test public:1:high_order_2.
+2018-02-23T22:54:41+00:00 MDaleDeskTopLinux#02 I: Start test public:4:common_2.
+2018-02-23T22:54:41+00:00 MDaleDeskTopLinux#02 I: Test public:4:common_2 is successful.
+2018-02-23T22:54:41+00:00 MDaleDeskTopLinux#02 I: End test public:4:common_2.
+2018-02-23T22:54:41+00:00 MDaleDeskTopLinux#02 I: Start test public:7:graph_2.
+2018-02-23T22:54:41+00:00 MDaleDeskTopLinux#02 I: Test public:7:graph_2 is successful.
+2018-02-23T22:54:41+00:00 MDaleDeskTopLinux#02 I: End test public:7:graph_2.

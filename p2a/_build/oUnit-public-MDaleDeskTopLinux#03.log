@@ -1,0 +1,15 @@
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: Start test public:2:ack.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: Test public:2:ack is successful.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: End test public:2:ack.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: Start test public:5:partial_sum.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: Test public:5:partial_sum is successful.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: End test public:5:partial_sum.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: Start test public:8:index.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: Test public:8:index is successful.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: End test public:8:index.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: Start test public:10:subset.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: Test public:10:subset is successful.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: End test public:10:subset.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: Start test public:13:intersection.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: Test public:13:intersection is successful.
+2018-02-17T01:55:28+00:00 MDaleDeskTopLinux#03 I: End test public:13:intersection.

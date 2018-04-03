@@ -20,21 +20,21 @@
 # Target: public.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:public.cmo, file:public.ml, implem, ocaml, quiet }
 /usr/bin/ocamlc -c -I /home/mdale/.opam/system/lib/bytes -I /home/mdale/.opam/system/lib/oUnit -I /usr/lib/ocaml -o public.cmo public.ml # cached
 # Target: data.ml.depends, tags: { extension:ml, file:data.ml, ocaml, ocamldep, quiet }
-/usr/bin/ocamldep -modules data.ml > data.ml.depends # cached
+/usr/bin/ocamldep -modules data.ml > data.ml.depends
 # Target: funs.ml.depends, tags: { extension:ml, file:funs.ml, ocaml, ocamldep, quiet }
 /usr/bin/ocamldep -modules funs.ml > funs.ml.depends # cached
 # Target: funs.cmx, tags: { compile, extension:cmx, extension:ml, file:funs.cmx, file:funs.ml, implem, native, ocaml, quiet }
 /usr/bin/ocamlopt -c -I /home/mdale/.opam/system/lib/bytes -I /home/mdale/.opam/system/lib/oUnit -I /usr/lib/ocaml -o funs.cmx funs.ml # cached
-# Target: data.cmx, tags: { compile, extension:cmx, extension:ml, file:data.cmx, file:data.ml, implem, native, ocaml, quiet }
-/usr/bin/ocamlopt -c -I /home/mdale/.opam/system/lib/bytes -I /home/mdale/.opam/system/lib/oUnit -I /usr/lib/ocaml -o data.cmx data.ml # cached
 # Target: higher.ml.depends, tags: { extension:ml, file:higher.ml, ocaml, ocamldep, quiet }
-/usr/bin/ocamldep -modules higher.ml > higher.ml.depends
+/usr/bin/ocamldep -modules higher.ml > higher.ml.depends # cached
+# Target: higher.cmx, tags: { compile, extension:cmx, extension:ml, file:higher.cmx, file:higher.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt -c -I /home/mdale/.opam/system/lib/bytes -I /home/mdale/.opam/system/lib/oUnit -I /usr/lib/ocaml -o higher.cmx higher.ml # cached
 # Target: testUtils.cmx, tags: { compile, extension:cmx, extension:ml, file:testUtils.cmx, file:testUtils.ml, implem, native, ocaml, quiet }
 /usr/bin/ocamlopt -c -I /home/mdale/.opam/system/lib/bytes -I /home/mdale/.opam/system/lib/oUnit -I /usr/lib/ocaml -o testUtils.cmx testUtils.ml # cached
-# Target: higher.cmx, tags: { compile, extension:cmx, extension:ml, file:higher.cmx, file:higher.ml, implem, native, ocaml, quiet }
-/usr/bin/ocamlopt -c -I /home/mdale/.opam/system/lib/bytes -I /home/mdale/.opam/system/lib/oUnit -I /usr/lib/ocaml -o higher.cmx higher.ml
+# Target: data.cmx, tags: { compile, extension:cmx, extension:ml, file:data.cmx, file:data.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt -c -I /home/mdale/.opam/system/lib/bytes -I /home/mdale/.opam/system/lib/oUnit -I /usr/lib/ocaml -o data.cmx data.ml
 # Target: public.cmx, tags: { compile, extension:cmx, extension:ml, file:public.cmx, file:public.ml, implem, native, ocaml, quiet }
-/usr/bin/ocamlopt -c -I /home/mdale/.opam/system/lib/bytes -I /home/mdale/.opam/system/lib/oUnit -I /usr/lib/ocaml -o public.cmx public.ml # cached
+/usr/bin/ocamlopt -c -I /home/mdale/.opam/system/lib/bytes -I /home/mdale/.opam/system/lib/oUnit -I /usr/lib/ocaml -o public.cmx public.ml
 # Target: public.native, tags: { dont_link_with, extension:native, file:public.native, link, native, ocaml, program, quiet }
 /usr/bin/ocamlopt -I /home/mdale/.opam/system/lib/bytes -I /home/mdale/.opam/system/lib/oUnit -I /usr/lib/ocaml /usr/lib/ocaml/unix.cmxa /home/mdale/.opam/system/lib/oUnit/oUnitAdvanced.cmxa /home/mdale/.opam/system/lib/oUnit/oUnit.cmxa funs.cmx data.cmx higher.cmx testUtils.cmx public.cmx -o public.native
 # Compilation successful.
