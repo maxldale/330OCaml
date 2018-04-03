@@ -26,6 +26,123 @@ let rec fix comp f x0 =
   let next = f x0 in
   if comp x0 next then x0 else fix comp f next
 
+(********************************************)
+(* Using my own Sets, unsorted sets are bad *)
+(********************************************)
+
+let rec my_set_elem x a = 
+	let length = List.length a in
+	if length <= 0 then
+		false
+	else begin
+		let head = List.hd a in
+		if x=head then
+			true
+		else begin
+			let tail = List.tl a in
+			my_set_elem x tail
+		end
+	end
+;;
+
+let rec my_set_insert x a = 
+	let exists = my_set_elem x a in
+	if exists then
+		a
+	else begin
+		let length = List.length a in
+		if length <= 0 then
+			x :: a
+		else begin
+			let head = List.hd a in
+			if x < head then
+				x :: a
+			else begin
+				let tail = List.tl a in
+				head :: (my_set_insert x tail)
+			end
+		end
+	end
+;;
+
+let rec my_set_subset a b = 
+	let lengthA = List.length a in
+	if lengthA <=0 then
+		true
+	else begin
+		let lengthB = List.length b in
+		if lengthB <= 0 then
+			false
+		else begin
+			let headA = List.hd a in
+			let headB = List.hd b in
+			let tailA = List.tl a in
+			let tailB = List.tl b in
+			if headA = headB then
+				my_set_subset tailA tailB
+			else begin
+				if headA > headB then
+					my_set_subset a tailB
+				else begin
+					false
+				end
+			end
+		end
+	end
+;;
+
+let rec my_set_eq a b = 
+	a=b
+;;
+
+let rec my_set_union a b = 
+	let lengthA = List.length a in
+	let lengthB = List.length b in
+	if lengthA <= 0 then
+			b
+	else begin
+		if lengthB <= 0 then
+			a
+		else begin
+			let headA = List.hd a in
+			let headB = List.hd b in
+			let tailA = List.tl a in
+			let tailB = List.tl b in
+			if headA = headB then
+				headA :: (my_set_union tailA tailB)
+			else begin
+				if headA < headB then
+					headA :: (my_set_union tailA b)
+				else begin
+					headB :: (my_set_union a tailB)
+				end
+			end
+		end
+	end
+;;
+
+let rec my_set_intersection a b = 
+	let lengthA = List.length a in
+	let lengthB = List.length b in
+	if lengthA <= 0 || lengthB <= 0 then
+		[]
+	else begin
+		let headA = List.hd a in
+		let headB = List.hd b in
+		let tailA = List.tl a in
+		let tailB = List.tl b in
+		if headA = headB then
+			headA :: (my_set_intersection tailA tailB)
+		else begin
+			if headA < headB then
+				my_set_intersection tailA b
+			else begin
+				my_set_intersection a tailB
+			end
+		end
+	end
+;;
+
 (****************)
 (* Part 1: NFAs *)
 (****************)
@@ -53,7 +170,7 @@ let rec filterTransitions state transitions symbol =
 					match res_opt with
 					  Some(res) ->
 						begin
-					  		res :: (filterTransitions state t_transitions symbol)
+					  		my_set_insert res (filterTransitions state t_transitions symbol)
 					  	end
 					  | None -> filterTransitions state t_transitions symbol
 				end
@@ -68,7 +185,7 @@ let rec filterTransitionsManyStates states transitions symbol =
 		begin
 			let h_res = (filterTransitions h_state transitions symbol) in
 			let t_res = (filterTransitionsManyStates t_states transitions symbol) in
-			List.append h_res t_res
+			my_set_union h_res t_res
 		end
 ;;
 
@@ -76,19 +193,16 @@ let move m qs s =
 	filterTransitionsManyStates qs m.delta s
 ;;
 
-let rec e_closureManyStates states transitions =
-	match states with
-	  [] -> []
-	| h_state :: t_states ->
-		begin
-			let h_res = (h_state :: (filterTransitions h_state transitions None)) in
-			let t_res = (e_closureManyStates t_states transitions) in
-			List.append h_res t_res
-		end
+let rec e_closureRec m states =
+	let res = (my_set_union states (move m states None)) in
+	if res = states then
+		states
+	else
+		e_closureRec m res
 ;;
 		
 let e_closure m qs = 
-	e_closureManyStates qs m.delta
+	e_closureRec m qs
 ;;
 
 let rec checkIfEndState end_states state =
@@ -142,60 +256,45 @@ let rec lookup_state state_map state =
 		end
 ;;
 
-let rec contains_same_ele arr1 arr2 =
-	match arr1 with
-	  [] -> false
-	| h1 :: t1 ->
-		begin
-			match arr2 with
-			  [] -> false
-			| h2 :: t2 ->
-				begin
-					if h1 = h2 then
-						true
-					else
-						let res1 = contains_same_ele arr1 t2 in
-						let res2 = contains_same_ele t1 arr2 in
-						(res1 || res2)
-				end
-		end
-
 let rec get_end_states final_states state_map =
 	match state_map with
 	  [] -> []
 	| state :: t_s_m ->
 		begin
-			if (contains_same_ele state final_states) then
-				state :: (get_end_states final_states t_s_m)
+			if ((my_set_intersection state final_states) != []) then
+				my_set_insert state (get_end_states final_states t_s_m)
 			else
 				(get_end_states final_states t_s_m)
 		end
 ;;
 
 let rec convert_nfa m sigma curr_state state_map transitions =
-	let orig_sigma = m.sigma in
 	match sigma with
 	  [] -> (transitions, state_map)
 	| symbol :: symbols ->
 		begin
 			let moves = (move m curr_state (Some symbol)) in
-			let new_state = e_closure m moves in
-			match (lookup_state state_map new_state) with
-			  None ->
-				begin
-					let new_s_m = new_state :: state_map in
-					let new_t = (curr_state, (Some symbol), new_state) in
-					let new_ts = new_t :: transitions in
-					let curr_index_res = convert_nfa m symbols curr_state new_s_m new_ts in
-					let (curr_t, curr_s_m) = curr_index_res in
-					convert_nfa m orig_sigma new_state curr_s_m curr_t
-				end
-			| Some(existing_s) ->
-				begin
-					let new_t = (curr_state, (Some symbol), existing_s) in
-					let new_ts = new_t :: transitions in
-					convert_nfa m symbols curr_state state_map new_ts
-				end
+			let new_state = (e_closure m moves) in
+			if new_state = [] then
+				convert_nfa m symbols curr_state state_map transitions
+			else begin
+				match (lookup_state state_map new_state) with
+				  None ->
+					begin
+						let new_s_m = (Sets.insert new_state state_map) in
+						let new_t = (curr_state, (Some symbol), new_state) in
+						let new_ts = (my_set_insert new_t transitions) in
+						let curr_index_res = convert_nfa m symbols curr_state new_s_m new_ts in
+						let (curr_t, curr_s_m) = curr_index_res in
+						convert_nfa m m.sigma new_state curr_s_m curr_t
+					end
+				| Some(existing_s) ->
+					begin
+						let new_t = (curr_state, (Some symbol), existing_s) in
+						let new_ts = (my_set_insert new_t transitions) in
+						convert_nfa m symbols curr_state state_map new_ts
+					end
+			end
 		end
 ;;
 

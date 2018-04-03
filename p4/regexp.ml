@@ -48,16 +48,22 @@ let rec remove_dups (l1 : 'a list) (l2 : 'a list) : 'a list =
 		end
 ;;
 
+let get_end_state es =
+	match es with
+	  [] -> -1
+	| h :: _ -> h
+;;
+
 let rec generate_nfa re =
 	match re with
 	  Empty_String ->
 		begin
 			{
-				qs = [0];
+				qs = [0;1];
 				sigma = [];
-				delta = [];
+				delta = [(0, None, 1)];
 				q0 = 0;
-				fs = [0];
+				fs = [1];
 			}
 		end
 	| Char c ->
@@ -80,23 +86,24 @@ let rec generate_nfa re =
 			let nfa1 = generate_nfa exp1 in
 			let nfa2 = generate_nfa exp2 in
 			
-			let i_1_2 = (1 + (List.length nfa1.qs)) in
-			let i_2_1 = (1 + i_1_2) in
-			let i_2_2 = (i_2_1 + (List.length nfa2.qs) - 1) in
+			let shift = (2 + (List.length nfa1.qs)) in
 			
 			let nfa1_qs = (shift_qs nfa1.qs 2) in
-			let nfa2_qs = (shift_qs nfa2.qs i_2_1) in
+			let nfa2_qs = (shift_qs nfa2.qs shift) in
 			let new_qs = (0 :: 1 :: (List.append nfa1_qs nfa2_qs)) in
 			
 			let new_sigma = (List.append nfa1.sigma (remove_dups nfa1.sigma nfa2.sigma)) in
 			
+			let end_nfa1 = (2 + (get_end_state nfa1.fs)) in
+			let end_nfa2 = (shift + (get_end_state nfa2.fs)) in
+			
 			let nfa1_deltas = (shift_deltas nfa1.delta 2) in
-			let nfa2_deltas = (shift_deltas nfa2.delta i_2_1) in
+			let nfa2_deltas = (shift_deltas nfa2.delta shift) in
 			let new_delta = (
 				(0, None, 2) ::
-				(0, None, i_2_1) ::
-				(i_1_2, None, 1) ::
-				(i_2_2, None, 1) ::
+				(0, None, shift) ::
+				(end_nfa1, None, 1) ::
+				(end_nfa2, None, 1) ::
 				(List.append nfa1_deltas nfa2_deltas)) in
 			
 			let new_q0 = 0 in
@@ -116,22 +123,23 @@ let rec generate_nfa re =
 			let nfa1 = generate_nfa exp1 in
 			let nfa2 = generate_nfa exp2 in
 			
-			let i_1 = (1 + (List.length nfa1.qs)) in
-			let i_2 = (1 + i_1) in
-			let i_3 = (i_2 + (List.length nfa2.qs) - 1) in
+			let shift = (2 + (List.length nfa1.qs)) in
 			
 			let nfa1_qs = (shift_qs nfa1.qs 2) in
-			let nfa2_qs = (shift_qs nfa2.qs i_2) in
+			let nfa2_qs = (shift_qs nfa2.qs shift) in
 			let new_qs = (0 :: 1 :: (List.append nfa1_qs nfa2_qs)) in
 			
 			let new_sigma = (List.append nfa1.sigma (remove_dups nfa1.sigma nfa2.sigma)) in
 			
+			let end_nfa1 = (2 + (get_end_state nfa1.fs)) in
+			let end_nfa2 = (shift + (get_end_state nfa2.fs)) in
+			
 			let nfa1_deltas = (shift_deltas nfa1.delta 2) in
-			let nfa2_deltas = (shift_deltas nfa2.delta i_2) in
+			let nfa2_deltas = (shift_deltas nfa2.delta shift) in
 			let new_delta = (
 				(0, None, 2) ::
-				(i_1, None, i_2) ::
-				(i_3, None, 1) ::
+				(end_nfa1, None, shift) ::
+				(end_nfa2, None, 1) ::
 				(List.append nfa1_deltas nfa2_deltas)) in
 			
 			let new_q0 = 0 in
@@ -150,19 +158,19 @@ let rec generate_nfa re =
 		begin
 			let nfa = generate_nfa exp in
 			
-			let i_1 = (1 + (List.length nfa.qs)) in
-			
 			let nfa_qs = (shift_qs nfa.qs 2) in
 			let new_qs = (0 :: 1 :: nfa_qs) in
 			
 			let new_sigma = (nfa.sigma) in
+			
+			let end_nfa = (2 + (get_end_state nfa.fs)) in
 			
 			let nfa_deltas = (shift_deltas nfa.delta 2) in
 			let new_delta = (
 				(0, None, 1) ::
 				(0, None, 2) ::
 				(1, None, 0) ::
-				(i_1, None, 1) ::
+				(end_nfa, None, 1) ::
 				nfa_deltas) in
 			
 			let new_q0 = 0 in
