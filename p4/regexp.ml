@@ -196,8 +196,8 @@ let rec form_regex r =
 	  Empty_String -> "E"
 	| Char c -> (String.make 1 c)
 	| Union (exp1, exp2) -> "(" ^ (form_regex exp1) ^ "|" ^ (form_regex exp2) ^ ")"
-	| Concat (exp1, exp2) -> "(" ^ (form_regex exp1) ^ (form_regex exp2) ^ ")"
-	| Star exp -> (form_regex exp) ^ "*"
+	| Concat (exp1, exp2) -> "(" ^(form_regex exp1) ^ (form_regex exp2) ^ ")"
+	| Star exp -> "(" ^ (form_regex exp) ^ ")*"
 ;;
 
 let regexp_to_string r =
