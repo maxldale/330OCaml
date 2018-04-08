@@ -1,0 +1,140 @@
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: Start test public:1:assign-exp.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Test public:1:assign-exp exited with an error.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Failure("tok: *a;printf(a);}") in test public:1:assign-exp.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: 
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: End test public:1:assign-exp.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: Start test public:4:exp1.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Test public:4:exp1 exited with an error.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Failure("tok: (a);}") in test public:4:exp1.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: 
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: End test public:4:exp1.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: Start test public:9:if-else-while.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Test public:9:if-else-while exited with an error.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Failure("tok: }") in test public:9:if-else-while.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: 
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: End test public:9:if-else-while.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: Start test public:12:nested-if.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Test public:12:nested-if exited with an error.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Failure("tok: }") in test public:12:nested-if.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: 
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: End test public:12:nested-if.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: Start test public:17:test2.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Test public:17:test2 exited with an error.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Failure("tok: }") in test public:17:test2.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: 
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: End test public:17:test2.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: Start test public:20:test-assoc1.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Test public:20:test-assoc1 exited with an error.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Failure("tok: }") in test public:20:test-assoc1.
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: Called from unknown location
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 E: 
+2018-04-08T21:36:45+00:00 maxl-Gazelle#02 I: End test public:20:test-assoc1.
