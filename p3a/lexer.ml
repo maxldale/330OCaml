@@ -14,59 +14,78 @@ let block expr =
 
 let rest = (group ".*");;
 
+let regex rule =
+	Str.regexp (rule ^ rest)
+
 let int_r =
 	let digits = ((block "0-9") ^ "+") in
-	let nums = (group ("-?" ^ digits)) in
-	Str.regexp (nums ^ rest)
+	regex (group ("-?" ^ digits))
 ;;
 
 let str_r =
 	let ltr = (block "a-zA-Z") in
 	let ltrsOrNums = ((block ("a-zA-Z0-9") ^ "*")) in
-	let str = (group (ltr ^ ltrsOrNums)) in
-	Str.regexp (str ^ rest)
+	regex (group (ltr ^ ltrsOrNums))
 ;;
 
-let paren_r =
-	let parens = (group "(|)") in
-	Str.regexp (parens ^ rest)
+let l_paren_r =
+	regex (group "(")
 ;;
 
 
-let brace_r =
-	let brace = (group "{|}") in
-	Str.regexp (brace ^ rest)
+let r_paren_r =
+	regex (group ")")
+;;
+
+let l_brace_r =
+	regex (group "{")
+;;
+
+
+let r_brace_r =
+	regex (group "}")
 ;;
 
 
 let eq_r =
 	let fstSym = (block "=|!|>|<") in
 	let sndSym = "=?" in
-	let eq = (group (fstSym ^ sndSym)) in
-	Str.regexp (eq ^ rest)
+	regex (group (fstSym ^ sndSym))
 ;;
 
 
 let b_op_r =
 	let or_op = (block "\\|\\|") in
 	let and_op = "&&" in
-	let bool_op = (group (or_op ^ "|" ^ and_op)) in
-	Str.regexp (bool_op ^ rest)
+	regex (group (or_op ^ "|" ^ and_op))
 ;;
 
 
 let s_c_r =
-	let semi_colon = (group ";") in
-	Str.regexp (semi_colon ^ rest)
+	regex (group ";")
 ;;
 
 
-let math_r =
-	let plus = (block "\\+") in
-	let mult = (block "\\*") in
-	let pow = (block "\\^") in
-	let math = (group (plus ^ "-" ^ mult ^ "/" ^ pow)) in
-	Str.regexp (math ^ rest)
+let plus_r =
+	regex (group "\\+")
+;;
+
+
+let minus_r =
+	regex (group "-")
+;;
+
+
+let mult_r =
+	regex (group "\\*")
+;;
+
+let div_r =
+	regex (group "/")
+;;
+
+let pow_r =
+	regex (group "\\^")
 ;;
 
 (*********)
@@ -172,17 +191,22 @@ let rec str_to_tok tok =
 	match tok with
 	  "" -> []
 	| str ->
-		let () = (print_string str) in
 		let tok = 
 			(match str with
 			  int_str when (match_str int_r int_str) -> (tok_int int_str)
 			| str_str when (match_str str_r str_str) -> (tok_str str_str)
-			| paren_str when (match_str paren_r paren_str) -> (tok_paren paren_str)
-			| brace_str when (match_str brace_r brace_str) -> (tok_brace brace_str)
+			| l_paren_str when (match_str l_paren_r l_paren_str) -> (tok_paren l_paren_str)
+			| r_paren_str when (match_str r_paren_r r_paren_str) -> (tok_paren r_paren_str)
+			| l_brace_str when (match_str l_brace_r l_brace_str) -> (tok_brace l_brace_str)
+			| r_brace_str when (match_str r_brace_r r_brace_str) -> (tok_brace r_brace_str)
 			| eq_str when (match_str eq_r eq_str) -> (tok_eq eq_str)
 			| b_op_str when (match_str b_op_r b_op_str) -> (tok_b_op b_op_str)
 			| s_c_str when (match_str s_c_r s_c_str) -> (tok_s_c s_c_str)
-			| math_str when (match_str math_r math_str) -> (tok_math math_str)
+			| plus_str when (match_str plus_r plus_str) -> (tok_math plus_str)
+			| minus_str when (match_str minus_r minus_str) -> (tok_math minus_str)
+			| mult_str when (match_str mult_r mult_str) -> (tok_math mult_str)
+			| div_str when (match_str div_r div_str) -> (tok_math div_str)
+			| pow_str when (match_str pow_r pow_str) -> (tok_math pow_str)
 			| _ -> failwith ("tok: " ^ str)) in
 		let rest = (match_rest str) in
 		tok :: (str_to_tok rest)
