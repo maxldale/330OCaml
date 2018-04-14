@@ -214,7 +214,7 @@ let rec str_to_tok tok =
 
 let rec tokenize_str_list str_list =
 	match str_list with
-	  [] -> []
+	  [] -> [EOF]
 	| str :: tl_list -> (List.append (str_to_tok str)  (tokenize_str_list tl_list))
 ;;
 
