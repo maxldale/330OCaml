@@ -1,30 +1,21 @@
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Start test public:1:assign-exp.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Test public:1:assign-exp is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: End test public:1:assign-exp.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Start test public:4:exp1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Test public:4:exp1 is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: End test public:4:exp1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Start test public:8:ifelse.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Test public:8:ifelse is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: End test public:8:ifelse.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Start test public:12:nested-if.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Test public:12:nested-if is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: End test public:12:nested-if.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Start test public:16:test1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: Test public:16:test1 has failed.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: not equal in test public:16:test1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: 
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: End test public:16:test1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Start test public:19:test4.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: Test public:19:test4 has failed.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: not equal in test public:19:test4.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: 
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: End test public:19:test4.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: Start test public:21:while.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: Test public:21:while has failed.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: not equal in test public:21:while.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 E: 
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#02 I: End test public:21:while.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Start test public:1:assign-exp.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Test public:1:assign-exp is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: End test public:1:assign-exp.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Start test public:5:exp2.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Test public:5:exp2 is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: End test public:5:exp2.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Start test public:6:greater.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Test public:6:greater is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: End test public:6:greater.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Start test public:9:if-else-while.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Test public:9:if-else-while is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: End test public:9:if-else-while.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Start test public:13:nested-ifelse.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Test public:13:nested-ifelse is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: End test public:13:nested-ifelse.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Start test public:17:test2.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Test public:17:test2 is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: End test public:17:test2.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Start test public:21:while.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: Test public:21:while is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#02 I: End test public:21:while.

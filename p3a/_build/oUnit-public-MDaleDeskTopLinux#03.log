@@ -1,18 +1,18 @@
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: Start test public:2:define1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: Test public:2:define1 is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: End test public:2:define1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: Start test public:6:greater.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: Test public:6:greater is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: End test public:6:greater.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: Start test public:10:less.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: Test public:10:less is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: End test public:10:less.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: Start test public:14:nested-while.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 E: Test public:14:nested-while has failed.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 E: not equal in test public:14:nested-while.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 E: 
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: End test public:14:nested-while.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: Start test public:15:print.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: Test public:15:print is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#03 I: End test public:15:print.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: Start test public:2:define1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: Test public:2:define1 is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: End test public:2:define1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: Start test public:8:ifelse.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: Test public:8:ifelse is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: End test public:8:ifelse.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: Start test public:12:nested-if.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: Test public:12:nested-if is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: End test public:12:nested-if.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: Start test public:16:test1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: Test public:16:test1 is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: End test public:16:test1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: Start test public:20:test-assoc1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 E: Test public:20:test-assoc1 has failed.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 E: not equal in test public:20:test-assoc1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 E: Called from unknown location
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 E: 
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#03 I: End test public:20:test-assoc1.

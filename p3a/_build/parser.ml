@@ -293,90 +293,95 @@ and formStmt (toks, stmt) =
 	  EOF :: [] -> ([], Seq(stmt, NoOp))
 	| EOF :: _ -> (raise (InvalidInputException "failed to parse stmt"))
 	| Tok_Int_Type :: (Tok_ID id) :: Tok_Semi :: t ->
-	  	(let (n_t, res) = (formStmt(t, (Declare (Int_Type, id)))) in
-	  	(n_t, Seq(stmt, res)))
+	  	(let (t2, res) = (formStmt(t, (Declare (Int_Type, id)))) in
+	  	(t2, Seq(stmt, res)))
 	| Tok_Bool_Type :: (Tok_ID id) :: Tok_Semi :: t ->
-	  	(let (n_t, res) = (formStmt(t, (Declare (Bool_Type, id)))) in
-	  	(n_t, Seq(stmt, res)))
+	  	(let (t2, res) = (formStmt(t, (Declare (Bool_Type, id)))) in
+	  	(t2, Seq(stmt, res)))
 	| (Tok_ID id) :: Tok_Assign :: t ->
-	  	(let (new_t, expr) = (parse_expr t) in
-	  	let n_t = (match_token new_t Tok_Semi) in
-	  	let (nn_t, res) = (formStmt (n_t, (Assign (id, expr)))) in
-	  	(nn_t, Seq(stmt, res)))
+	  	(let (t2, expr) = (parse_expr t) in
+	  	let t3 = (match_token t2 Tok_Semi) in
+	  	let (t4, res) = (formStmt (t3, (Assign (id, expr)))) in
+	  	(t4, Seq(stmt, res)))
 	| Tok_Print :: Tok_LParen :: t ->
-	  	(let (new_t, expr) = (parse_expr t) in
-	  	let n_t = (match_token new_t Tok_RParen) in
-	  	let nn_t = (match_token n_t Tok_Semi) in
-	  	let (nnn_t, res) = formStmt(nn_t, Print expr) in
-	  	(nnn_t, Seq(stmt, res)))
+	  	(let (t2, expr) = (parse_expr t) in
+	  	let t3 = (match_token t2 Tok_RParen) in
+	  	let t4 = (match_token t3 Tok_Semi) in
+	  	let (t5, res) = formStmt(t4, Print expr) in
+	  	(t5, Seq(stmt, res)))
 	| Tok_If :: Tok_LParen :: t ->
-	  	(let (new_t, expr) = (parse_expr t) in
-	  	let n_t = (match_token new_t Tok_RParen) in
-	  	let nn_t = (match_token n_t Tok_LBrace) in
-	  	let (nnn_t, stmt1) = (parse_stmt nn_t) in
-	  	let nnnn_t = (match_token nnn_t Tok_RBrace) in
-	  	let () = print_string ("\n" ^ string_of_list string_of_token nnnn_t) in
-	  	match nnnn_t with
-	  	  Tok_Else :: Tok_LBrace :: tt -> 
-	  	  	(let () = print_string ("\n" ^ string_of_list string_of_token tt) in
-	  	  	let (nnew_t, stmt2) = (parse_stmt tt) in
-	  	  	let () = print_string ("After:\n" ^ string_of_list string_of_token nnew_t) in
-	  	  	let nnnnn_t = (match_token nnew_t Tok_RBrace) in
+	  	(let (t2, expr) = (parse_expr t) in
+	  	let t3 = (match_token t2 Tok_RParen) in
+	  	let t4 = (match_token t3 Tok_LBrace) in
+	  	let (t5, stmt1) = (parse_stmt t4) in
+	  	(match t5 with
+	  	  Tok_RBrace :: Tok_Else :: Tok_LBrace :: t6 -> 
+	  	  	(let _ = print_string ("Aftr:\n" ^ string_of_list string_of_token t6) in
+	  	  	let (t7, stmt2) = (parse_stmt t6) in
+	  	  	(*let () = print_string ("After:\n" ^ string_of_list string_of_token t8) in*)
+	  	  	let t8 = (match_token t7 Tok_RBrace) in
 	  	  	
-	  		let () = print_string ("\n" ^ string_of_stmt stmt1) in
-	  		let () = print_string ("\n" ^ string_of_stmt stmt2) in
-	  	  	let (nnnnnn_t, res) = (formStmt (nnnnn_t, (If (expr, stmt1, stmt2)))) in
-	  	  	(nnnnnn_t, Seq(stmt, res)))
-	  	| _ -> 
-	  		(let (nnnnnnn_t, res) = (formStmt (nnnn_t, (If (expr, stmt1, NoOp)))) in
-	  		(nnnnnnn_t, Seq(stmt, res))))
+	  		(*let () = print_string ("Stmt1:\n" ^ string_of_stmt stmt1) in*)
+	  		let _ = print_string ("Stmt2:\n" ^ string_of_stmt stmt2) in
+	  	  	let (t9, res) = (formStmt (t8, (If (expr, stmt1, stmt2)))) in
+	  	  	(t9, Seq(stmt, res)))
+	  	| Tok_RBrace :: t6 -> 
+	  		(let (t7, res) = (formStmt (t6, (If (expr, stmt1, NoOp)))) in
+	  		(t7, Seq(stmt, res)))
+	  	| _ -> (raise (InvalidInputException "failed to parse stmt"))))
 	| Tok_While :: Tok_LParen :: t ->
-	  	(let (new_t, expr) = (parse_expr t) in
-	  	let n_t = (match_token new_t Tok_RParen) in
-	  	let nn_t = (match_token n_t Tok_LBrace) in
-	  	let (nnn_t, stmt) = (parse_stmt nn_t) in
-	  	let nnnn_t = (match_token nnn_t Tok_RBrace) in
-	  	let (nnnnn_t, res) = (formStmt (nnnn_t, While (expr, stmt))) in
-	  	(nnnnn_t, Seq(stmt, res)))
-	| _ -> (toks, Seq(stmt, NoOp)))
+	  	(let (t2, expr) = (parse_expr t) in
+	  	let t3 = (match_token t2 Tok_RParen) in
+	  	let t4 = (match_token t3 Tok_LBrace) in
+	  	let (t5, stmt) = (parse_stmt t4) in
+	  	let t6 = (match_token t5 Tok_RBrace) in
+	  	let (t7, res) = (formStmt (t6, While (expr, stmt))) in
+	  	(t7, Seq(stmt, res)))
+	| _ -> (toks, stmt))
 	
 and firstStmt toks =
 	(match toks with
 	  EOF :: [] -> ([], NoOp)
 	| EOF :: _ -> (raise (InvalidInputException "failed to parse stmt"))
 	| Tok_Int_Type :: (Tok_ID id) :: Tok_Semi :: t ->
-	  	(formStmt (t, Declare (Int_Type, id)))
+		(let (t2, stmt) = (parse_stmt t) in
+	  	(t2, (Seq ((Declare (Int_Type, id)), stmt))))
 	| Tok_Bool_Type :: (Tok_ID id) :: Tok_Semi :: t ->
-	  	(formStmt (t, Declare (Bool_Type, id)))
+		(let (t2, stmt) = (parse_stmt t) in
+	  	(t2, (Seq ((Declare (Bool_Type, id)), stmt))))
 	| (Tok_ID id) :: Tok_Assign :: t ->
 	  	(let (new_t, expr) = (parse_expr t) in
-	  	let () = print_string (string_of_expr expr) in
 	  	let n_t = (match_token new_t Tok_Semi) in
-	  	(formStmt (n_t, Assign (id, expr))))
+	  	let (t2, stmt) = (parse_stmt n_t) in
+	  	(t2, (Seq ((Assign (id, expr)), stmt))))
 	| Tok_Print :: Tok_LParen :: t ->
 	  	(let (new_t, expr) = (parse_expr t) in
 	  	let n_t = (match_token new_t Tok_RParen) in
 	  	let nn_t = (match_token n_t Tok_Semi) in
-	  	(formStmt (nn_t, Print expr)))
+	  	let (t2, stmt) = (parse_stmt nn_t) in
+	  	(t2, (Seq ((Print expr), stmt))))
 	| Tok_If :: Tok_LParen :: t ->
 	  	(let (new_t, expr) = (parse_expr t) in
 	  	let n_t = (match_token new_t Tok_RParen) in
-	  	let nn_t = (match_token new_t Tok_LBrace) in
+	  	let nn_t = (match_token n_t Tok_LBrace) in
 	  	let (nnn_t, stmt1) = (parse_stmt nn_t) in
-	  	let nnnn_t = (match_token new_t Tok_RBrace) in
+	  	let nnnn_t = (match_token nnn_t Tok_RBrace) in
 	  	match nnnn_t with
 	  	  Tok_Else :: Tok_LBrace :: t -> 
 	  	  	(let (new_t, stmt2) = (parse_stmt t) in
 	  	  	let n_t = (match_token new_t Tok_RBrace) in
-	  	  	(formStmt (n_t, If (expr, stmt1, stmt2))))
-	  	| _ -> (formStmt (nnnn_t, If (expr, stmt1, NoOp))))
+	  	  	let (t2, stmt) = (parse_stmt n_t) in
+	  		(t2, (Seq ((If (expr, stmt1, stmt2)), stmt))))
+	  	| _ -> (let (t2, stmt) = (parse_stmt nnnn_t) in
+	  		(t2, (Seq ((If (expr, stmt1, NoOp)), stmt)))))
 	| Tok_While :: Tok_LParen :: t ->
 	  	(let (new_t, expr) = (parse_expr t) in
 	  	let n_t = (match_token new_t Tok_RParen) in
-	  	let nn_t = (match_token new_t Tok_LBrace) in
+	  	let nn_t = (match_token n_t Tok_LBrace) in
 	  	let (nnn_t, stmt) = (parse_stmt nn_t) in
-	  	let nnnn_t = (match_token new_t Tok_RBrace) in
-	  	(formStmt (nnnn_t, While (expr, stmt))))
+	  	let nnnn_t = (match_token nnn_t Tok_RBrace) in
+	  	let (t2, stmt2) = (parse_stmt nnnn_t) in
+	  	(t2, (Seq ((While (expr, stmt)), stmt2))))
 	| _ -> (toks, NoOp))
 ;;
 

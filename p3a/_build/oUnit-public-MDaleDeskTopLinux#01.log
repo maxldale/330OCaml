@@ -1,35 +1,18 @@
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: Start test public:0:assign1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: Test public:0:assign1 is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: End test public:0:assign1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: Start test public:5:exp2.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: Test public:5:exp2 is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: End test public:5:exp2.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: Start test public:9:if-else-while.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Test public:9:if-else-while has failed.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: not equal in test public:9:if-else-while.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: 
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: End test public:9:if-else-while.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: Start test public:11:main.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: Test public:11:main is successful.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: End test public:11:main.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: Start test public:17:test2.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Test public:17:test2 exited with an error.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: SmallCTypes.InvalidInputException("Expected Tok_LBrace from input [Tok_RParen, Tok_LBrace, Tok_Print, Tok_LParen, Tok_ID(\"a\"), Tok_RParen, Tok_Semi, Tok_RBrace, Tok_Else, Tok_LBrace, Tok_Print, Tok_LParen, Tok_ID(\"b\"), Tok_RParen, Tok_Semi, Tok_RBrace, Tok_RBrace, Tok_Else, Tok_LBrace, Tok_ID(\"c\"), Tok_Assign, Tok_Int(1), Tok_Semi, Tok_While, Tok_LParen, Tok_ID(\"c\"), Tok_Less, Tok_ID(\"a\"), Tok_RParen, Tok_LBrace, Tok_Print, Tok_LParen, Tok_ID(\"c\"), Tok_RParen, Tok_Semi, Tok_ID(\"c\"), Tok_Assign, Tok_ID(\"c\"), Tok_Add, Tok_Int(1), Tok_Semi, Tok_RBrace, Tok_RBrace, Tok_RBrace, EOF], got Tok_RParen") in test public:17:test2.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: 
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: End test public:17:test2.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: Start test public:20:test-assoc1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Test public:20:test-assoc1 has failed.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: not equal in test public:20:test-assoc1.
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: Called from unknown location
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 E: 
-2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#01 I: End test public:20:test-assoc1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Start test public:0:assign1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Test public:0:assign1 is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: End test public:0:assign1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Start test public:4:exp1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Test public:4:exp1 is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: End test public:4:exp1.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Start test public:7:if.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Test public:7:if is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: End test public:7:if.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Start test public:11:main.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Test public:11:main is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: End test public:11:main.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Start test public:15:print.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Test public:15:print is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: End test public:15:print.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Start test public:19:test4.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: Test public:19:test4 is successful.
+2018-04-14T22:31:27+00:00 MDaleDeskTopLinux#01 I: End test public:19:test4.
