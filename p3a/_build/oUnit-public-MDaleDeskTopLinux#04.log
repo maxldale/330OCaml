@@ -1,0 +1,12 @@
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: Start test public:3:equal.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: Test public:3:equal is successful.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: End test public:3:equal.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: Start test public:7:if.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: Test public:7:if is successful.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: End test public:7:if.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: Start test public:13:nested-ifelse.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: Test public:13:nested-ifelse is successful.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: End test public:13:nested-ifelse.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: Start test public:18:test3.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: Test public:18:test3 is successful.
+2018-04-14T16:55:54+00:00 MDaleDeskTopLinux#04 I: End test public:18:test3.
